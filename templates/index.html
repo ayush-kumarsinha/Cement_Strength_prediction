@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cement Strength Prediction</title>
+
+```
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#f4f4f4;
+        margin:0;
+        padding:0;
+    }
+
+    .container{
+        width:50%;
+        margin:50px auto;
+        background:white;
+        padding:30px;
+        border-radius:10px;
+        box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+    }
+
+    h1{
+        text-align:center;
+        color:#333;
+    }
+
+    input{
+        width:100%;
+        padding:10px;
+        margin:8px 0;
+        border:1px solid #ccc;
+        border-radius:5px;
+    }
+
+    button{
+        width:100%;
+        padding:12px;
+        background:#007bff;
+        color:white;
+        border:none;
+        border-radius:5px;
+        cursor:pointer;
+        font-size:16px;
+    }
+
+    button:hover{
+        background:#0056b3;
+    }
+
+    .result{
+        margin-top:20px;
+        text-align:center;
+        font-size:22px;
+        color:green;
+        font-weight:bold;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<h1>Cement Strength Prediction</h1>
+
+<form action="/predict" method="post">
+
+    <input type="number" step="any" name="cement"
+           placeholder="Cement" required>
+
+    <input type="number" step="any" name="slag"
+           placeholder="Blast Furnace Slag" required>
+
+    <input type="number" step="any" name="flyash"
+           placeholder="Fly Ash" required>
+
+    <input type="number" step="any" name="water"
+           placeholder="Water" required>
+
+    <input type="number" step="any" name="superplasticizer"
+           placeholder="Superplasticizer" required>
+
+    <input type="number" step="any" name="coarseagg"
+           placeholder="Coarse Aggregate" required>
+
+    <input type="number" step="any" name="fineagg"
+           placeholder="Fine Aggregate" required>
+
+    <input type="number" step="any" name="age"
+           placeholder="Age (Days)" required>
+
+    <button type="submit">Predict Strength</button>
+
+</form>
+
+<div class="result">
+    {{ prediction_text }}
+</div>
+```
+
+</div>
+
+</body>
+</html>
